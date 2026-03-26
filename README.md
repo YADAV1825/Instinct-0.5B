@@ -67,7 +67,7 @@ The loss curves are saved in `training_log.txt` and `val_perplexity.txt`. Below 
 
 The entire pipeline used to train the model is fully reproducible. This includes the dataset pipeline, tokenizer creation, model architecture, TPU training loop, and checkpointing system.
 
-**Full training pipeline repository:** *[PLACEHOLDER_GITHUB_TRAINING_PIPELINE_LINK]* *(Note: I will update it soon. I am working on the GitHub repo so a perfect TPU guide can be made for beginners rather than rushing. It will be available by March 20th).*
+**Full training pipeline repository:** [train.py](https://github.com/YADAV1825/Instinct-0.5B/blob/main/train.py)
 
 ---
 
