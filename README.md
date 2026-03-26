@@ -2,9 +2,11 @@
 
 # Instinct-1-0.5B
 
+*Instinct-1-0.5B is a fully reproducible, from-scratch trained 500M parameter language model trained on 150B tokens using TPU v4 infrastructure.*
+
 **Instinct-1-0.5B** is a 500M parameter Large Language Model built entirely from scratch under the **AutonomousX** organization. 
 
-Compute for this project was generously supported by **Google's TRC Program (TPU Research Cloud)**.
+Compute for this project was supported by **[Google's TRC Program (TPU Research Cloud)](https://sites.research.google/trc/about/)**.
 
 ---
 
