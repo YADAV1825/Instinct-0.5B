@@ -239,3 +239,11 @@ output_ids = generate(params, input_ids, 200)
 
 print("\n=== GENERATED TEXT ===\n")
 print(tokenizer.decode(output_ids[0].tolist()))
+```
+
+About AutonomousX
+AutonomousX focuses on open-source contributions aimed at building Large Language Models from scratch using custom training pipelines. Our work explores different training configurations including optimizers, datasets, and scalable TPU training using JAX and pmap. The goal is to provide transparent and reproducible implementations so that researchers, students, and developers can understand how modern LLMs are trained end-to-end.
+
+Due to the current scarcity of complete beginner-friendly guides for training LLMs on TPUs, especially using JAX, AutonomousX aims to bridge this gap by publishing full training pipelines, scripts, and documentation for the open-source community.
+
+Maintained by: Rohit Yadav | B.Tech NIT Jalandhar | yrohit1825@gmail.com | [Hugging_Face](https://huggingface.co/autonomousX)
