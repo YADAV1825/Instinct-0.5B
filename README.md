@@ -18,6 +18,15 @@ Dr. B.R. Ambedkar National Institute of Technology (NIT) Jalandhar, India
 **Research interests include:** Large Language Models, MultiModal Pipelines, Systems Programming, AI Infrastructure, Distributed Training.
 
 ---
+# About AutonomousX
+
+AutonomousX focuses on open-source contributions aimed at building Large Language Models from scratch using custom training pipelines. Our work explores different training configurations including optimizers, datasets, and scalable TPU training using JAX and pmap. The goal is to provide transparent and reproducible implementations so that researchers, students, and developers can understand how modern LLMs are trained end-to-end.
+
+Due to the current scarcity of complete beginner-friendly guides for training LLMs on TPUs, especially using JAX, AutonomousX aims to bridge this gap by publishing full training pipelines, scripts, and documentation for the open-source community.
+
+Maintained by: Rohit Yadav | B.Tech NIT Jalandhar | yrohit1825@gmail.com | [Hugging_Face](https://huggingface.co/autonomousX)
+
+---
 
 ### ⚠️ Disclaimer
 **This is a base model, not an SFT (Supervised Fine-Tuned) or RLHF (Reinforcement Learning from Human Feedback) model.** As a raw completion model, it may output undesired, biased, or nonsensical text. It is intended primarily for research and educational purposes.
@@ -76,8 +85,8 @@ The entire pipeline used to train the model is fully reproducible. This includes
 The trained LLM inference script and model weights are available at: [autonomousX/Instinct-1-0.5B on Hugging Face](https://huggingface.co/autonomousX/Instinct-1-0.5B).
 
 A ready-to-run Google Colab TPU/GPU inference script is provided below. Simply open a notebook, set your runtime to TPU or GPU, and run it. *(Please be patient, it may take around 20 mins to run the model initialization).*
-
-<div style="max-height:600px; overflow:auto;">
+<details>
+<summary>Click here to view the full Inference Code</summary>
 
 ```python
 #please be patient It may take 20 mins to run the model
@@ -85,7 +94,6 @@ A ready-to-run Google Colab TPU/GPU inference script is provided below. Simply o
 !pip install -q huggingface_hub
 
 from huggingface_hub import snapshot_download
-
 
 repo_id = "autonomousX/Instinct-1-0.5B"
 
@@ -269,8 +277,6 @@ def forward(params, input_ids):
 
 import jax.random as random
 
-import jax.random as random
-
 def generate(params, input_ids, max_new_tokens=30, temperature=0.9, top_k=40):
     rng = random.PRNGKey(0)
 
@@ -308,14 +314,5 @@ output_ids = generate(params, input_ids, 200)
 
 print("\n=== GENERATED TEXT ===\n")
 print(tokenizer.decode(output_ids[0].tolist()))
-
 ```
 
-</div>
-
-About AutonomousX
-AutonomousX focuses on open-source contributions aimed at building Large Language Models from scratch using custom training pipelines. Our work explores different training configurations including optimizers, datasets, and scalable TPU training using JAX and pmap. The goal is to provide transparent and reproducible implementations so that researchers, students, and developers can understand how modern LLMs are trained end-to-end.
-
-Due to the current scarcity of complete beginner-friendly guides for training LLMs on TPUs, especially using JAX, AutonomousX aims to bridge this gap by publishing full training pipelines, scripts, and documentation for the open-source community.
-
-Maintained by: Rohit Yadav | B.Tech NIT Jalandhar | yrohit1825@gmail.com | [Hugging_Face](https://huggingface.co/autonomousX)
