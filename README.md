@@ -1,6 +1,5 @@
 # Instinct-0.5B
 
-# Instinct-1-0.5B 
 **[autonomousX/Instinct-1-0.5B on Hugging Face](https://huggingface.co/autonomousX/Instinct-1-0.5B)**
 
 *Instinct-1-0.5B is a fully reproducible, from-scratch trained 500M parameter language model trained on 150B tokens using TPU v4 infrastructure.*
